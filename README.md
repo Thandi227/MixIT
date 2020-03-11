@@ -10,7 +10,8 @@
 * Orange: Show My Cards (Flips all of your boxes over)
 * Strawberry: Steal The CPU's Point (Takes 5 Points from the CPU and adds it to your score)
 
-# Timeline: 
+# Timeline:
+* Wednesday: Wireframes & Pseudocode 
 * Thursday: Finish CSS
 * Friday: Finish HTML
 * Saturday: Pseudocode & Start Javascript
