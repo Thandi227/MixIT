@@ -1,0 +1,163 @@
+.gameName{
+    background-color: salmon;
+    color: white; 
+    text-align: center;
+    font-size:35px; 
+    padding: 20%;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+}
+
+.instructions{
+    text-align: center;
+    padding:20%;
+}
+.instuctionTitle{
+    font-size: 50px;
+    font-family: sans-serif; 
+}
+
+.instuctionDescrip{
+    font-size: 50px;
+}
+.roundEasy {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #60A758;
+    border-radius: 127px;
+    border: 3px solid #60A758;
+}
+
+.roundMedium {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #f0bf0f;
+    border-radius: 127px;
+    border: 3px solid #f0bf0f;
+}
+
+.roundHard {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #ed4a4a;
+    border-radius: 127px;
+    border: 3px solid #ed4a4a;
+}
+
+.start{
+   
+    text-align: center;
+    width: 469px;
+    height: 120px;
+    overflow: visible;
+    background-color: #0093F5;
+    border-radius: 127px;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+    border: 7px solid #0093f5;
+    
+}
+
+.cpuContainer{
+    border: 3px solid sandybrown;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+}
+
+  .cpuBoxOne {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(72, 0, 255, 0.5);
+  }
+  
+  .cpuBoxTwo {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 85, 0, 0.5);
+  }
+  
+  .cpuBoxThree {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 251, 0, 0.5);
+  }
+  
+  .cpuBoxFour {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(0, 153, 255, 0.5);
+  }
+  
+  .cpuBoxFive {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(13, 255, 0, 0.5);
+  }
+  
+  .cpuBoxSix {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 0, 212, 0.5);
+    border:  rgba(255, 0, 212, 0.5);
+  }
+
+
+
+  .userContainer{
+    float: right;
+
+
+  }
+
+
+  .userBoxOne {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(72, 0, 255, 0.5);
+  }
+  
+  .userBoxTwo {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 85, 0, 0.5);
+  }
+  
+  .userBoxThree {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 251, 0, 0.5);
+  }
+  
+  .cpuBoxFour {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(0, 153, 255, 0.5);
+  }
+  
+  .userBoxFive {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(13, 255, 0, 0.5);
+  }
+  
+  .userBoxSix {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 0, 212, 0.5);
+    border:  rgba(255, 0, 212, 0.5);
+  }
