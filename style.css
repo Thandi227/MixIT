@@ -27,6 +27,7 @@
     background-color: #60A758;
     border-radius: 127px;
     border: 3px solid #60A758;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
 }
 
 .roundMedium {
@@ -36,6 +37,7 @@
     background-color: #f0bf0f;
     border-radius: 127px;
     border: 3px solid #f0bf0f;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
 }
 
 .roundHard {
@@ -45,14 +47,13 @@
     background-color: #ed4a4a;
     border-radius: 127px;
     border: 3px solid #ed4a4a;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
 }
 
 .start{
-   
-    text-align: center;
+    vertical-align: middle;
     width: 469px;
     height: 120px;
-    overflow: visible;
     background-color: #0093F5;
     border-radius: 127px;
     box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
@@ -60,6 +61,20 @@
     
 }
 
+.items{
+  float: left;
+  padding: 2%;
+}
+
+.timer{
+  float:right;
+  padding: 2%;
+}
+
+#game{
+  padding-top: 10%;
+  background-color: bisque;
+}
 .cpuContainer{
     border: 3px solid sandybrown;
     display: grid;
