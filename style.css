@@ -74,12 +74,16 @@
 #game{
   padding-top: 10%;
   background-color: bisque;
+
+
 }
-.cpuContainer{
-    border: 3px solid sandybrown;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 200px 200px 200px;
+#cpuContainer{
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  
 }
 
   .cpuBoxOne {
@@ -127,8 +131,15 @@
 
 
 
-  .userContainer{
+  #userContainer{
     float: right;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    
 
 
   }
