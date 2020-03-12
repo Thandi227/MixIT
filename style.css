@@ -79,6 +79,7 @@
 #game{
   padding-top: 10%;
   background-color: bisque;
+  display:left;
 
 
 }
@@ -88,7 +89,8 @@
   height: 200px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  display: block;
+  display: flex;
+
   
 }
 
