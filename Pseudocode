@@ -1,0 +1,288 @@
+Things That I will Need To Do:
+
+I will need to have/use
+  a HTML file
+  a CSS file
+  a JS file 
+  JQUERY
+
+Functions in CSS I will need to use
+- 
+
+Function in JS I will need to use
+
+Function in HTML I will need to use
+
+
+------
+
+<!DOCTYPE html>
+
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>Mix and Match </title>
+        
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <h1 class="gameName">Understanding Your Skincare</h1>
+
+        <div class="instructions">   
+            <h2 class="instuctionTitle">How to Play the Game</h2>
+            <p class="instuctionDescrip"> Match as many words as you can before the clock runs out. </br> Race against time and the computer as you work to throw the computer off its game.</p>
+            <button class="roundEasy">Easy</button>
+            <button class="roundMedium">Medium</button>
+            <button class="roundHard">Hard</button></br></br>
+            <button class="start">START</button>
+        </div>
+
+       
+        
+        <div class="items">
+            <img src="./assets/strawberry.png" width="100px" height="100px">
+            <img src="./assets/banana.png" width="100px" height="100px">
+            <img src="./assets/orange.png" width="100px" height="100px">
+            <img src="./assets/cherry.png" width="100px" height="100px">
+        </div>
+
+        <div class="timer">
+            time <img src="assets/timer.png" width="100px" height="100px">
+        </div>
+  
+
+    <div id="game"> 
+        <div id="cpuContainer">
+                <h1>Computer</h1>
+                <h2>Score:</h2>
+                <div class="cpuBoxOne"></div>
+                <div class="cpuBoxTwo"></div>
+                <div class="cpuBoxThree"></div>
+                <div class="cpuBoxFour"></div>
+                <div class="cpuBoxFive"></div>
+                <div class="cpuBoxSix"></div>
+        </div>
+
+        <div id="userContainer">
+                <h1>UserName</h1>
+                <h2>Score:</h2>
+                <div class="userBoxOne"></div>
+                <div class="userBoxTwo"></div>
+                <div class="userBoxThree"></div>
+                <div class="userBoxFour"></div>
+                <div class="userBoxFive"></div>
+                <div class="userBoxSix"></div>
+            </div>
+    
+    </div>
+
+
+----------------------------------
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+.gameName{
+    background-color: salmon;
+    color: white; 
+    text-align: center;
+    font-size:35px; 
+    padding: 20%;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+}
+
+.instructions{
+    text-align: center;
+    padding:20%;
+}
+.instuctionTitle{
+    font-size: 50px;
+    font-family: sans-serif; 
+}
+
+.instuctionDescrip{
+    font-size: 50px;
+}
+.roundEasy {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #60A758;
+    border-radius: 127px;
+    border: 3px solid #60A758;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+
+.roundMedium {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #f0bf0f;
+    border-radius: 127px;
+    border: 3px solid #f0bf0f;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+
+.roundHard {
+    width: 193px;
+    height: 75px;
+    overflow: visible;
+    background-color: #ed4a4a;
+    border-radius: 127px;
+    border: 3px solid #ed4a4a;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+
+.start{
+    vertical-align: middle;
+    width: 469px;
+    height: 120px;
+    background-color: #0093F5;
+    border-radius: 127px;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+    border: 7px solid #0093f5;
+    
+}
+
+.items{
+  float: left;
+  padding: 2%;
+}
+
+.timer{
+  float:right;
+  padding: 2%;
+}
+
+#game{
+  padding-top: 10%;
+  background-color: bisque;
+
+
+}
+#cpuContainer{
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  
+}
+
+  .cpuBoxOne {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(72, 0, 255, 0.5);
+  }
+  
+  .cpuBoxTwo {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 85, 0, 0.5);
+  }
+  
+  .cpuBoxThree {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 251, 0, 0.5);
+  }
+  
+  .cpuBoxFour {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(0, 153, 255, 0.5);
+  }
+  
+  .cpuBoxFive {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(13, 255, 0, 0.5);
+  }
+  
+  .cpuBoxSix {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 0, 212, 0.5);
+    border:  rgba(255, 0, 212, 0.5);
+  }
+
+
+
+  #userContainer{
+    float: right;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    
+
+
+  }
+
+
+  .userBoxOne {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(72, 0, 255, 0.5);
+  }
+  
+  .userBoxTwo {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 85, 0, 0.5);
+  }
+  
+  .userBoxThree {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 251, 0, 0.5);
+  }
+  
+  .cpuBoxFour {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(0, 153, 255, 0.5);
+  }
+  
+  .userBoxFive {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(13, 255, 0, 0.5);
+  }
+  
+  .userBoxSix {
+    width: 147px;
+    height: 142px;
+    overflow: visible;
+    background-color: rgba(255, 0, 212, 0.5);
+    border:  rgba(255, 0, 212, 0.5);
+  }
+
+
+
+
