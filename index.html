@@ -57,6 +57,23 @@
   
 
     <section class="computer"> 
+
+            <section class="score-panel">
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+        
+                    <span class="moves">0</span> Move(s)
+        
+                    <div class="timer">
+                    </div>
+        
+                    <div class="restart" onclick=startGame()>
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                </section>
         
                 <h1>Computer</h1>
                 <h2>Score:</h2>
@@ -127,13 +144,29 @@
                 
 
             <section class="myUser">
-
+                    
+                <section class="score-panel">
+                            <ul class="stars">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                
+                            <span class="moves">0</span> Move(s)
+                
+                            <div class="timer">
+                            </div>
+                
+                            <div class="restart" onclick=startGame()>
+                                <i class="fa fa-repeat"></i>
+                            </div>
+                        </section>
             
                         <h1>User</h1>
                         <h2>Score:</h2>
         
                         <section class="userContainer">
-                                <div class="flipCarduser1">
+                                <div class="flipCardUser1">
                                         <div class="userCard1">
                                                 <img src="./assets/Green Square.png" alt="Avatar" style="width:300px;height:300px;">
                                         </div>
@@ -147,7 +180,7 @@
                             </section>
         
                             <section class="userContainer2">
-                                    <div class="flipCarduser2">
+                                    <div class="flipCardUser2">
                                             <div class="userCard2">
                                                     <img src="./assets/Blue Square.png" alt="Avatar" style="width:300px;height:300px;">
                                             </div>
@@ -165,7 +198,7 @@
           
         
                                 <section class="userContainer4">
-                                        <div class="flipCarduser4">
+                                        <div class="flipCardUser4">
                                                 <div class="userCard4">
                                                         <img src="./assets/Purple Square.png" alt="Avatar" style="width:300px;height:300px;">
                                                 </div>
@@ -181,7 +214,7 @@
         
                                 <section class="userContainer5">
         
-                                        <div class="flipCarduser5">
+                                        <div class="flipCardUser5">
                                                 <div class="userCard5">
                                                         <img src="./assets/Pink Square.png" alt="Avatar" style="width:300px;height:300px;">
                                                 </div>
@@ -196,11 +229,26 @@
                                
         
                             </section>
+                            
            
+                            <div id="popup1" class="overlay">
+                                    <div class="popup">
+                                        <h2>Congratulations 🎉</h2>
+                                        <a class="close" href=# >×</a>
+                                        <div class="content-1">
+                                            Congratulations you're a winner 🎉🎉
+                                        </div>
+                                        <div class="content-2">
+                                            <p>You made <span id=finalMove> </span> moves </p>
+                                            <p>in <span id=totalTime> </span> </p>
+                                            <p>Rating:  <span id=starRating></span></p>
+                                        </div>
+                                        <button id="play-again"onclick="playAgain()">
+                                            Play again 😄</a>
+                                        </button>
+                                    </div>
+                                </div>
 
- 
-
-    </div>
  
 
 
