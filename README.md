@@ -20,6 +20,6 @@
 * Tuesday: Review HTML, CSS, Javascript & Submit
 
 # Wireframes
-![alt text](https://github.com/Thandi227/MixIT/blob/master/assets/Screen%20Shot%202020-03-11%20at%203.09.25%20PM.png "Logo Title Text 1")
+![alt text](https://github.com/Thandi227/MixIT/blob/master/assets/Wireframe%202.png "Logo Title Text 1")
 
-![alt text](https://github.com/Thandi227/MixIT/blob/master/assets/Screen%20Shot%202020-03-11%20at%203.09.32%20PM.png "Logo Title Text 1")
+![alt text](https://github.com/Thandi227/MixIT/blob/master/assets/Wireframe.png "Logo Title Text 1")
