@@ -13,6 +13,11 @@ body{
 p{
   font-size: 50px;
 }
+
+.level{
+  text-align: center;
+  
+}
 .gameName{
     background-color: salmon;
     color: white; 
@@ -28,11 +33,11 @@ p{
 
 
 .timer{
-  margin-left: 85px;
-  margin-right: 85px;
+  margin-left: 350px;
+  margin-right: 125px;
   padding: 3%;
   text-align: center;
-  background-color: #f0bf0f;
+  background-color: burlywood;
   font-size: 60px;
   border-radius: 3px;
   
@@ -232,7 +237,7 @@ transform: translateY(4px);
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: orange;
+  background:burlywood;
   backface-visibility: hidden;
 }
 
