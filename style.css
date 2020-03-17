@@ -1,3 +1,20 @@
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style:none;
+}
+.gameName{
+    background-color: salmon;
+    color: white; 
+    text-align: center;
+    font-size:150px; 
+    padding: 20%;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+    
+}
+
 /* Style for Instructions */
 
 .instructions{
@@ -96,6 +113,17 @@ box-shadow: 0 5px #632;
 transform: translateY(4px);
 } */
 
+/* Container that Houses the Game */
+
+.container{
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: grid;
+  grid: 150px / auto auto auto;
+
+}
+
 
 /* Style for Cards | So for the following CSS Code I am creating the parameters for which my cards will live in by calling on the containers that I made earlier - "cpu" and "user.  */
 .cpu {
@@ -103,17 +131,20 @@ transform: translateY(4px);
   height: 640px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   perspective: 1000px;
+
 }
 
 .user {
   width: 640px;
   height: 640px;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   position: relative;
   left: 75%;
   perspective: 1000px;
+  
   
 }
 
@@ -143,12 +174,12 @@ transform: translateY(4px);
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: transparent;
+  background: orange;
   backface-visibility: hidden;
 }
 
-/* This allows us to see the an image after we hover or click */
-.front{
+/* This allows us to see the an image after we hover or click. We can always change front or back depending on what side of the card we want to see.  */
+.back{
   transform: rotateY(180deg);
 }
 
@@ -165,20 +196,6 @@ transform: translateY(4px);
 
 
 
-/* *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.gameName{
-    background-color: salmon;
-    color: white; 
-    text-align: center;
-    font-size:35px; 
-    padding: 20%;
-    text-transform: uppercase; 
-    letter-spacing: 10px;
-}
 
 
 
