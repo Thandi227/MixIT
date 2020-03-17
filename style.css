@@ -34,6 +34,23 @@ p{
   text-align: center;
   background-color: #f0bf0f;
   font-size: 60px;
+  border-radius: 3px;
+  
+
+}
+
+.minutes{
+  padding: 15px;
+  border-radius: 3px;
+  background: rgb(57, 182, 159);
+  display: inline-block;
+}
+
+.seconds{
+  padding: 15px;
+  border-radius: 3px;
+  background: rgb(57, 182, 159);
+  display: inline-block;
 }
 
 
