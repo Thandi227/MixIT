@@ -19,6 +19,7 @@ function startTimer(duration, display) {
             timer = duration;
         }
     }, 1000);
+    
 }
 
 jQuery(function ($) {
@@ -27,58 +28,23 @@ jQuery(function ($) {
     startTimer(threeMinutes, display);
 });
 
+document.getElementsByClassName("roundEasy").addEventListner("click",threeMinutes);
+
 jQuery(function ($) {
     let oneMinute = 60 * 1,
         display = $('.mediumLevel');
     startTimer(oneMinute, display);
 });
 
+document.getElementsByClassName("roundMedium").addEventListner("click", oneMinute);
+
 jQuery(function ($) {
-    let thirtySeconds = 60 * .30,
+    let thirtySeconds = 60 * .5,
         display = $('.hardLevel');
-    startTimer(threeMinutes, display);
+    startTimer(thirtySeconds, display);
 });
 
-// let levelEasyTime = 'March 17 2020 00:03:00';
-// console.log(levelEasyTime);
- 
-//Date.Parse has to have a date and time; you cant just have a time stand alone. An alternative to Date.Parse is moment. Here I created a string that represents a given end time  and calculates
-
-// function getTimeRemaining(endtime) {
-//   let timeLeft = Date.parse(endtime) - Date.parse(new Date());
-//   let seconds = Math.floor((t / 1000) % 60);
-//   let minutes = Math.floor((t / 1000 / 60) % 60);
-//   return {
-//     'total': timeLeft,
-//     'minutes': minutes,
-//     'seconds': seconds
-//   };
-// }
-// console.log(getTimeRemaining);
-
-// function initializeTimer(timer, endtime) {
-//   let timer = document.getElementsByClassName(timer);
-//   let minutesSpan = timer.querySelector('.minutes');
-//   let secondsSpan = timer.querySelector('.seconds');
-
-//   function updateTimer() {
-//     let t = getTimeRemaining(endtime);
-
-//     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-//     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-//     if (t.total <= 0) {
-//       clearInterval(timeinterval);
-//     }
-//   }
-
-//   updateTimer();
-//   let timeinterval = setInterval(updateTimer, 1000);
-// }
-
-// let levelEasyTime = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-// initializeTimer('timer', levelEasyTime);
-
+document.getElementsByClassName("roundHard").addEventListner("click", thirtySeconds);
 
 
 
@@ -87,9 +53,9 @@ jQuery(function ($) {
 //BUTTONS
 // I added "addEventListener" to the my element so that when a user clicks a button an action occurs
 
-document.getElementsByClassName("roundEasy").addEventListner("click",levelEasyTime);
-document.getElementsByClassName("roundMedium").addEventListner("click", levelMedium);
-document.getElementsByClassName("roundHard").addEventListner("click", levelHard);
+
+
+
 
 
 
