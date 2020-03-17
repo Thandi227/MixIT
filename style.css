@@ -7,9 +7,11 @@
 body{
   background-color: salmon;
   color: white;
-  font-size:30px; 
- 
-  
+  font-size:30px;  
+}
+
+p{
+  font-size: 50px;
 }
 .gameName{
     background-color: salmon;
@@ -21,13 +23,19 @@ body{
     letter-spacing: 10px;
     
 }
-.timeRestart{
-  background-color: salmon;
-  text-align: center;
-  font-size: 150px;
-  color: white;
 
+/* TIMER */
+
+
+.timer{
+  margin-left: 85px;
+  margin-right: 85px;
+  padding: 3%;
+  text-align: center;
+  background-color: #f0bf0f;
+  font-size: 60px;
 }
+
 
 /* Style for Instructions */
 
@@ -215,9 +223,6 @@ transform: translateY(4px);
 .back{
   transform: rotateY(180deg);
 }
-
-
-
 
 
 

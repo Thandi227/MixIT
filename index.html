@@ -23,14 +23,22 @@
     <body>
 <!---Below are my instructions for the game, and the buttons to click which difficulty level you would like to select-->
         <h1 class="gameName"><u>Let's MIX IT!</u></h1>
-<!---For section timeRestart, I created two div elements. In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable.   -->
-<section class="timeRestart">
-                <div id="timer">
-                                Minutes: <span class="minutes"></span><br>
-                                Seconds: <span class="seconds"></span>
+<!---For section below, I created two div elements. In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable.   -->
+
+                <div class="timer">
+                        <p>
+                                <span class="minutes">0
+
+                                </span> Minutes
+
+                                <span class="seconds">0
+
+                                </span> Seconds
+                        </p>  
+                               
                             </div>
                 <div class="restart" onclick=startGame()>
-                </div>
+      
 
         </section>
         <div class="instructions">   
@@ -56,8 +64,11 @@
                 <section class="cpu">
                         <h1>CPU</h1>
                         <section class="cpuScore">
-                                <span class="cpuMoves">0</span> Moves
-                                <span class="cpuScore">0</span> Score
+                                <p> 
+                                        <span class="cpuMoves">0</span> Moves
+                                        <span class="cpuScore">0</span> Correct
+                                </p>
+                                
 
                         </section>
 
@@ -101,9 +112,12 @@
                 <section class="user">
                                 <h1>PLAYER</h1>
                         <section class="userScore">
+                                <p>
                                         <span class="userMoves">0</span> Moves
-                                        <span class="userScore">0</span> Score
-
+                                        <span class="userScore">0</span> Correct
+        
+                                </p>
+                                      
                         </section>
                         <ul class="userDeck" id="userCardDeck">
                                         <li class="card" data-framework="apple">

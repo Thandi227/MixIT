@@ -27,6 +27,15 @@ function getTimeRemaining(endtime){
     },1000);
   }
 
+let minutesSpan = clock.querySelector('.minutes');
+let secondsSpan = clock.querySelector('.seconds');
+
+function updateClock(){
+    let t = getTimeRemaining(endtime);
+    minutesSpan.innerHTML = t.minutes;
+    secondsSpan.innerHTML = t.seconds;
+
+}
     // //reset timer
     // second = 0;
     // minute = 0; 
