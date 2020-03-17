@@ -1,7 +1,6 @@
  *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   list-style:none;
 }
 
@@ -56,13 +55,13 @@ body{
   overflow: visible;
   background-color: #60A758;
   border-radius: 127px;
-  border: 3px solid #60A758;
+  border: 1px solid #29d42e;
   box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
   
   
 }
 .roundEasy:hover{
-background-color: #3e8e41;
+background-color: #29d42e;
 }
 
 .roundEasy:active{
@@ -77,12 +76,12 @@ transform: translateY(4px);
   overflow: visible;
   background-color: #f0bf0f;
   border-radius: 127px;
-  border: 3px solid #f0bf0f;
+  border: 1px solid #rgb(255, 230, 0);
   box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
 }
 
 .roundMedium:hover{
-background-color: goldenrod;
+background-color: rgb(255, 230, 0);
 }
 
 .roundMedium:active{
@@ -97,7 +96,7 @@ transform: translateY(4px);
   overflow: visible;
   background-color: #ed4a4a;
   border-radius: 127px;
-  border: 3px solid #ed4a4a;
+  border: 1px solid red;
   box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
 }
 
@@ -118,12 +117,12 @@ transform: translateY(4px);
   background-color: #0093F5;
   border-radius: 127px;
   box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
-  border: 7px solid #0093f5;
+  border: 1px solid  rgb(0, 217, 255);
   
 }
 
 .start:hover{
-background-color: royalblue;
+background-color: rgb(0, 217, 255);
 }
 
 .start:active{
@@ -169,6 +168,18 @@ transform: translateY(4px);
 	
 }
 
+/* These containers allow us to create the grid effect */
+.cpuDeck{
+  display: grid;
+  grid: auto/ auto auto auto;
+  margin-right: 350px;
+}
+.userDeck{
+  display: grid;
+  grid: auto / auto auto auto;
+}
+
+
 /* Here I am definig the parameters for my cards, below is what I want each of them to do. The transition refers to the amount of seconds it will take for our card to transform so if we say that our card will transform in .60 seconds we will need to click and hold for that time period. The transform refers to. The transform-style refers to.  */
 .card {
   width: 325px;
@@ -177,7 +188,7 @@ transform: translateY(4px);
   position: relative;
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   transform-style: preserve-3d;
-  transform:scale(1);
+  transform:scale(0.95);
   transition:transform .4s;
 }
 
@@ -204,16 +215,6 @@ transform: translateY(4px);
   transform: rotateY(180deg);
 }
 
-
-.cpuDeck{
-  display: grid;
-  grid: auto/ auto auto auto;
-  margin-right: 350px;
-}
-.userDeck{
-  display: grid;
-  grid: auto / auto auto auto;
-}
 
 
 
