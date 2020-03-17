@@ -195,6 +195,7 @@ transform: translateY(4px);
 /* The animation of flip and active to ensure that the functionality is there */ 
 .card:active {
   transform: rotateY(180deg);
+  
 }
 
 /* The ability to position one image behind (or ontop of) the other comes from the function the "position: absolute" and setting both the "front" card and "back" card to have the same parameters. The background that exists within the instructions for ".front,.back" will be place in between of the two images we have (an easy way to see your other image is to set the background to transparent). */
