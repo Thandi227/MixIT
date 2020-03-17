@@ -4,7 +4,7 @@ function flipCard(){
 }
 
 
-//Timer
+//TIMER
 
 let second = 0, minute = 0; hour = 0;
 let timer = document.querySelector(".timer");
@@ -23,6 +23,8 @@ function startTimer(){
         }
     },1000);
 }
+
+//BUTTONS
 // I added "addEventListener" to the my element so that when a user clicks a button an action occurs
 
 document.getElementsByClassName("roundEasy").addEventListner("click",levelEasy);
@@ -42,3 +44,14 @@ function levelMedium() {
 function levelHard() {
     
 }
+
+//START 
+
+//CARDS
+
+//MOVES
+
+//SCORE or CORRECT RIGHT
+
+//SHUFFLE
+
