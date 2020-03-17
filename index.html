@@ -20,17 +20,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     <body>
+<!---Below are my instructions for the game, and the buttons to click which difficulty level you would like to select-->
         <h1 class="gameName">Understanding Your Skincare</h1>
 
         <div class="instructions">   
@@ -42,216 +33,79 @@
             <button class="start">START</button>
         </div>
 
-       
-        
-        <div class="items">
-            <img src="./assets/strawberry.png" width="100px" height="100px">
-            <img src="./assets/banana.png" width="100px" height="100px">
-            <img src="./assets/orange.png" width="100px" height="100px">
-            <img src="./assets/cherry.png" width="100px" height="100px">
-        </div>
+<!----Below is where you will see my game layout created in HTML, I created a div because I wanted to divide the game from the instructions. I named it container because it will make for easier styling once I head into the CSS. For example, I can allow my game layout to have a fixed with or to be centered.  From here I then separated it into 3 sections: the scoreTimeMove, the cpu and the user. Within the scoreboard I chose to . The two sections cpu and the user are very similar - within these sections I chose to use the tag ul which stands for unorderd list since we want our cards to be unordered (unordered list = deck of cards). The li tag represents the items in my list(or deck). -->
 
-        <div class="timer">
-            time <img src="assets/timer.png" width="100px" height="100px">
-        </div>
-  
 
-    <section class="computer"> 
+        <div class="container">
 
-            <section class="score-panel">
-                    <ul class="stars">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>
-        
-                    <span class="moves">0</span> Move(s)
-        
-                    <div class="timer">
-                    </div>
-        
-                    <div class="restart" onclick=startGame()>
-                        <i class="fa fa-repeat"></i>
-                    </div>
-                </section>
-        
-                <h1>Computer</h1>
-                <h2>Score:</h2>
-
-                <section class="cpuContainer">
-                        <div class="flipCardcpu1">
-                                <div class="cpuCard1">
-                                        <img src="./assets/Green Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                </div>
-                                    <div class="cpuRxn1">
-                                            <h1>John Doe</h1>
-                                            <p>Architect & Engineer</p>
-                                            <p>We love that guy</p>
-                                    </div>
+<!---For section scoreTimeMove, I created two div elements and one span. Naming them appropriately for their usage. I chose span for the moves because I wanted it to be in line with the text "Amount of Moves". In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable. I chose to put the span tag around the integer 0 because I know that I will want to manipulate it in my javascript later.  -->
+                <section class="scoreTimeMove">
+                        <span class="moves">0</span> Amount of moves
+                        <div class="timer"></div>
+                        <div class="restart" onclick=startGame()>
 
                         </div>
-                    </section>
 
-                    <section class="cpuContainer2">
-                            <div class="flipCardcpu2">
-                                    <div class="cpuCard2">
-                                            <img src="./assets/Blue Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                    </div>
-                                        <div class="cpuRxn2">
-                                                <h1>Janmei Doe</h1>
-                                                <p>Architect & Engineer</p>
-                                                <p>We love that guy</p>
-                                        </div>
-    
-                            </div>
+                </section>
 
-                    </section>
-         
-                        
-  
-
-                        <section class="cpuContainer4">
-                                <div class="flipCardcpu4">
-                                        <div class="cpuCard4">
-                                                <img src="./assets/Purple Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                        </div>
-                                            <div class="cpuRxn4">
-                                                    <h1>John Doe</h1>
-                                                    <p>Architect & Engineer</p>
-                                                    <p>We love that guy</p>
-                                            </div>
-            
-                                    </div>
-                        </section>
-                      
-
-                        <section class="cpuContainer5">
-
-                                <div class="flipCardcpu5">
-                                        <div class="cpuCard5">
-                                                <img src="./assets/Pink Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                        </div>
-                                            <div class="cpuRxn5">
-                                                    <h1>John Doe</h1>
-                                                    <p>Architect & Engineer</p>
-                                                    <p>We love that guy</p>
-                                            </div>
-            
-                                </div>
-                        </section>
-                       
-               
+<!---For section cpu, I created two div elements and one span. Naming them appropriately for their usage. I chose span for the moves because I wanted it to be in line with the text "Amount of Moves". In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable -->              
                 
+                <section class="cpu">
+                        <ul class="cpuDeck" id="cpuCardDeck">
+                                <li class="card">
 
-            <section class="myUser">
-                    
-                <section class="score-panel">
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                
-                            <span class="moves">0</span> Move(s)
-                
-                            <div class="timer">
-                            </div>
-                
-                            <div class="restart" onclick=startGame()>
-                                <i class="fa fa-repeat"></i>
-                            </div>
-                        </section>
-            
-                        <h1>User</h1>
-                        <h2>Score:</h2>
+                                </li>
+
+                                <li class="card">
+                                        
+                                        </li>
+                                 <li class="card">
+                                        
+                                        </li> 
+                                <li class="card">
+
+                                        </li>
         
-                        <section class="userContainer">
-                                <div class="flipCardUser1">
-                                        <div class="userCard1">
-                                                <img src="./assets/Green Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                        </div>
-                                            <div class="userRxn1">
-                                                    <h1>John Doe</h1>
-                                                    <p>Architect & Engineer</p>
-                                                    <p>We love that guy</p>
-                                            </div>
-        
-                                </div>
-                            </section>
-        
-                            <section class="userContainer2">
-                                    <div class="flipCardUser2">
-                                            <div class="userCard2">
-                                                    <img src="./assets/Blue Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                            </div>
-                                                <div class="userRxn2">
-                                                        <h1>Janmei Doe</h1>
-                                                        <p>Architect & Engineer</p>
-                                                        <p>We love that guy</p>
-                                                </div>
-            
-                                    </div>
-        
-                            </section>
-                 
+                                <li class="card">
+                                        
+                                        </li>
+                                <li class="card">
                                 
-          
-        
-                                <section class="userContainer4">
-                                        <div class="flipCardUser4">
-                                                <div class="userCard4">
-                                                        <img src="./assets/Purple Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                                </div>
-                                                    <div class="userRxn4">
-                                                            <h1>John Doe</h1>
-                                                            <p>Architect & Engineer</p>
-                                                            <p>We love that guy</p>
-                                                    </div>
-                    
-                                            </div>
-                                </section>
-                              
-        
-                                <section class="userContainer5">
-        
-                                        <div class="flipCardUser5">
-                                                <div class="userCard5">
-                                                        <img src="./assets/Pink Square.png" alt="Avatar" style="width:300px;height:300px;">
-                                                </div>
-                                                    <div class="userRxn5">
-                                                            <h1>John Doe</h1>
-                                                            <p>Architect & Engineer</p>
-                                                            <p>We love that guy</p>
-                                                    </div>
-                    
-                                        </div>
-                                </section>
-                               
-        
-                            </section>
-                            
-           
-                            <div id="popup1" class="overlay">
-                                    <div class="popup">
-                                        <h2>Congratulations 🎉</h2>
-                                        <a class="close" href=# >×</a>
-                                        <div class="content-1">
-                                            Congratulations you're a winner 🎉🎉
-                                        </div>
-                                        <div class="content-2">
-                                            <p>You made <span id=finalMove> </span> moves </p>
-                                            <p>in <span id=totalTime> </span> </p>
-                                            <p>Rating:  <span id=starRating></span></p>
-                                        </div>
-                                        <button id="play-again"onclick="playAgain()">
-                                            Play again 😄</a>
-                                        </button>
-                                    </div>
-                                </div>
+                                </li>        
+                        </ul>
 
- 
+                </section>
 
+<!---For section user, I created an element with a class and an id. The reasoning behind this was that it was a way to avoid confusion for me down the road. So, my class "userDeck" would be for stying in CSS and my id "userCardDeck" would be for my javascript. Alternatively, I could use both class and id within my CSS. However, the id "userCardDeck" would have to remain unique/for this specific element whereas  the class "userDeck" could be used for multiple elements. -->
+                <section class="user">
+                        <ul class="userDeck" id="userCardDeck">
+                                <li class="card">
 
+                                        </li>
+        
+                                <li class="card">
+                                        
+                                        </li>
+                                        <li class="card">
+                                        
+                                        </li> 
+                                <li class="card">
+
+                                        </li>
+        
+                                <li class="card">
+                                        
+                                        </li>
+                                <li class="card">
+                                
+                                </li> 
+
+                        </ul>
+
+                </section>
+
+        </div>
+       
 
 
 
@@ -271,3 +125,221 @@
 
 
 </html>
+
+
+
+
+
+
+_---------------
+
+
+        
+<div class="items">
+                <img src="./assets/strawberry.png" width="100px" height="100px">
+                <img src="./assets/banana.png" width="100px" height="100px">
+                <img src="./assets/orange.png" width="100px" height="100px">
+                <img src="./assets/cherry.png" width="100px" height="100px">
+            </div>
+    
+            <div class="timer">
+                time <img src="assets/timer.png" width="100px" height="100px">
+            </div>
+      
+    
+        <section class="computer"> 
+    
+                <section class="score-panel">
+                        <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+            
+                        <span class="moves">0</span> Move(s)
+            
+                        <div class="timer">
+                        </div>
+            
+                        <div class="restart" onclick=startGame()>
+                            <i class="fa fa-repeat"></i>
+                        </div>
+                    </section>
+            
+                    <h1>Computer</h1>
+                    <h2>Score:</h2>
+    
+                    <section class="cpuContainer">
+                            <div class="flipCardcpu1">
+                                    <div class="cpuCard1">
+                                            <img src="./assets/Green Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                    </div>
+                                        <div class="cpuRxn1">
+                                                <h1>John Doe</h1>
+                                                <p>Architect & Engineer</p>
+                                                <p>We love that guy</p>
+                                        </div>
+    
+                            </div>
+                        </section>
+    
+                        <section class="cpuContainer2">
+                                <div class="flipCardcpu2">
+                                        <div class="cpuCard2">
+                                                <img src="./assets/Blue Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                        </div>
+                                            <div class="cpuRxn2">
+                                                    <h1>Janmei Doe</h1>
+                                                    <p>Architect & Engineer</p>
+                                                    <p>We love that guy</p>
+                                            </div>
+        
+                                </div>
+    
+                        </section>
+             
+                            
+      
+    
+                            <section class="cpuContainer4">
+                                    <div class="flipCardcpu4">
+                                            <div class="cpuCard4">
+                                                    <img src="./assets/Purple Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                            </div>
+                                                <div class="cpuRxn4">
+                                                        <h1>John Doe</h1>
+                                                        <p>Architect & Engineer</p>
+                                                        <p>We love that guy</p>
+                                                </div>
+                
+                                        </div>
+                            </section>
+                          
+    
+                            <section class="cpuContainer5">
+    
+                                    <div class="flipCardcpu5">
+                                            <div class="cpuCard5">
+                                                    <img src="./assets/Pink Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                            </div>
+                                                <div class="cpuRxn5">
+                                                        <h1>John Doe</h1>
+                                                        <p>Architect & Engineer</p>
+                                                        <p>We love that guy</p>
+                                                </div>
+                
+                                    </div>
+                            </section>
+                           
+                   
+                    
+    
+                <section class="myUser">
+                        
+                    <section class="score-panel">
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                    
+                                <span class="moves">0</span> Move(s)
+                    
+                                <div class="timer">
+                                </div>
+                    
+                                <div class="restart" onclick=startGame()>
+                                    <i class="fa fa-repeat"></i>
+                                </div>
+                            </section>
+                
+                            <h1>User</h1>
+                            <h2>Score:</h2>
+            
+                            <section class="userContainer">
+                                    <div class="flipCardUser1">
+                                            <div class="userCard1">
+                                                    <img src="./assets/Green Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                            </div>
+                                                <div class="userRxn1">
+                                                        <h1>John Doe</h1>
+                                                        <p>Architect & Engineer</p>
+                                                        <p>We love that guy</p>
+                                                </div>
+            
+                                    </div>
+                                </section>
+            
+                                <section class="userContainer2">
+                                        <div class="flipCardUser2">
+                                                <div class="userCard2">
+                                                        <img src="./assets/Blue Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                                </div>
+                                                    <div class="userRxn2">
+                                                            <h1>Janmei Doe</h1>
+                                                            <p>Architect & Engineer</p>
+                                                            <p>We love that guy</p>
+                                                    </div>
+                
+                                        </div>
+            
+                                </section>
+                     
+                                    
+              
+            
+                                    <section class="userContainer4">
+                                            <div class="flipCardUser4">
+                                                    <div class="userCard4">
+                                                            <img src="./assets/Purple Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                                    </div>
+                                                        <div class="userRxn4">
+                                                                <h1>John Doe</h1>
+                                                                <p>Architect & Engineer</p>
+                                                                <p>We love that guy</p>
+                                                        </div>
+                        
+                                                </div>
+                                    </section>
+                                  
+            
+                                    <section class="userContainer5">
+            
+                                            <div class="flipCardUser5">
+                                                    <div class="userCard5">
+                                                            <img src="./assets/Pink Square.png" alt="Avatar" style="width:300px;height:300px;">
+                                                    </div>
+                                                        <div class="userRxn5">
+                                                                <h1>John Doe</h1>
+                                                                <p>Architect & Engineer</p>
+                                                                <p>We love that guy</p>
+                                                        </div>
+                        
+                                            </div>
+                                    </section>
+                                   
+            
+                                </section>
+                                
+               
+                                <div id="popup1" class="overlay">
+                                        <div class="popup">
+                                            <h2>Congratulations 🎉</h2>
+                                            <a class="close" href=# >×</a>
+                                            <div class="content-1">
+                                                Congratulations you're a winner 🎉🎉
+                                            </div>
+                                            <div class="content-2">
+                                                <p>You made <span id=finalMove> </span> moves </p>
+                                                <p>in <span id=totalTime> </span> </p>
+                                                <p>Rating:  <span id=starRating></span></p>
+                                            </div>
+                                            <button id="play-again"onclick="playAgain()">
+                                                Play again 😄</a>
+                                            </button>
+                                        </div>
+                                    </div>
+    
+     
+    
+    

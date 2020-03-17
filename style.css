@@ -1,4 +1,4 @@
-*{
+/* *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -130,11 +130,7 @@
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #ffffff;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 100px 300px;
-  grid-gap: 10px;
-  padding: 10px;
+  
 }
 
 /* COMPUTER CARDS */
@@ -331,7 +327,7 @@ transform: rotateY(180deg);
 }
 
 
-/* USER CARDS */
+
 
 .myUser{
   text-align: center;
@@ -524,9 +520,6 @@ transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
     
-/*
- * Styles for the Score Panel
- */
 
 
  .score-panel {
@@ -641,4 +634,4 @@ transform: rotateY(180deg);
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #ffffff;
 	border-radius: 5px;
-}
+} */
