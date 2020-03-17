@@ -1,10 +1,109 @@
-/* So for the following CSS Code I am creating the parameters for which my cards will live in, the ability to position one image behind the other, the animation of flip and hover to ensure that the functionality is there */
+/* Style for Instructions */
+
+.instructions{
+  text-align: center;
+  padding:20%;
+}
+.instuctionTitle{
+  font-size: 50px;
+  font-family: sans-serif; 
+}
+
+.instuctionDescrip{
+  font-size: 50px;
+}
+
+
+/* Style for Buttons| Active makes it clickable */
+
+.roundEasy {
+  width: 193px;
+  height: 75px;
+  overflow: visible;
+  background-color: #60A758;
+  border-radius: 127px;
+  border: 3px solid #60A758;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+.roundEasy:hover{
+background-color: #3e8e41;
+}
+
+.roundEasy:active{
+background-color: #3e8e41;
+box-shadow: 0 5px #632;
+transform: translateY(4px);
+}
+
+.roundMedium {
+  width: 193px;
+  height: 75px;
+  overflow: visible;
+  background-color: #f0bf0f;
+  border-radius: 127px;
+  border: 3px solid #f0bf0f;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+
+.roundMedium:hover{
+background-color: goldenrod;
+}
+
+.roundMedium:active{
+background-color: goldenrod;
+box-shadow: 0 5px #632;
+transform: translateY(4px);
+}
+
+.roundHard {
+  width: 193px;
+  height: 75px;
+  overflow: visible;
+  background-color: #ed4a4a;
+  border-radius: 127px;
+  border: 3px solid #ed4a4a;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+}
+
+.roundHard:hover{
+background-color: red;
+}
+
+.roundHard:active{
+background-color: red;
+box-shadow: 0 5px #632;
+transform: translateY(4px);
+}
+
+.start{
+  vertical-align: middle;
+  width: 469px;
+  height: 120px;
+  background-color: #0093F5;
+  border-radius: 127px;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+  border: 7px solid #0093f5;
+  
+}
+
+.start:hover{
+background-color: royalblue;
+}
+
+.start:active{
+background-color: royalblue;
+box-shadow: 0 5px #632;
+transform: translateY(4px);
+} */
+
+
+/* Style for Cards | So for the following CSS Code I am creating the parameters for which my cards will live in by calling on the containers that I made earlier - "cpu" and "user.  */
 .cpu {
   width: 640px;
   height: 640px;
   display: flex;
   flex-wrap: wrap;
-  
+  perspective: 1000px;
 }
 
 .user {
@@ -14,22 +113,28 @@
   flex-wrap: wrap;
   position: relative;
   left: 75%;
+  perspective: 1000px;
   
 }
 
+/* Here I am definig the parameters for my cards, below is what I want each of them to do. The transition refers to the amount of seconds it will take for our card to transform so if we say that our card will transform in .60 seconds we will need to click and hold for that time period. The transform refers to. The transform-style refers to.  */
 .card {
   width: 200px;
   height: 200px;
   margin: 5px;
   position: relative;
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-  transition: transform 0.8s;
   transform-style: preserve-3d;
+  transform:scale(1);
+  transition:transform .4s;
 }
 
-.card:hover {
+/* The animation of flip and active to ensure that the functionality is there */ 
+.card:active {
   transform: rotateY(180deg);
 }
+
+/* The ability to position one image behind (or ontop of) the other comes from the function the "position: absolute" and setting both the "front" card and "back" card to have the same parameters. The background that exists within the instructions for ".front,.back" will be place in between of the two images we have (an easy way to see your other image is to set the background to transparent). */
 
 .front,
 .back {
@@ -38,6 +143,47 @@
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
+  background: transparent;
+  backface-visibility: hidden;
 }
+
+/* This allows us to see the an image after we hover or click */
+.front{
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.gameName{
+    background-color: salmon;
+    color: white; 
+    text-align: center;
+    font-size:35px; 
+    padding: 20%;
+    text-transform: uppercase; 
+    letter-spacing: 10px;
+}
+
+
+
+
+ 
+
+
 
