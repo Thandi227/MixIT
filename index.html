@@ -25,8 +25,10 @@
         <h1 class="gameName"><u>Let's MIX IT!</u></h1>
 <!---For section timeRestart, I created two div elements. In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable.   -->
 <section class="timeRestart">
-                <span class="timer">0:00
-                </span> s
+                <div id="timer">
+                                Minutes: <span class="minutes"></span><br>
+                                Seconds: <span class="seconds"></span>
+                            </div>
                 <div class="restart" onclick=startGame()>
                 </div>
 
@@ -37,7 +39,7 @@
             <button class="roundEasy">Easy</button>
             <button class="roundMedium">Medium</button>
             <button class="roundHard">Hard</button></br></br>
-            <button class="start">START</button>
+            <button class="start" onclick=startGame()>START</button>
         </div>
      
               
