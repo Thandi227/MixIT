@@ -23,7 +23,14 @@
     <body>
 <!---Below are my instructions for the game, and the buttons to click which difficulty level you would like to select-->
         <h1 class="gameName"><u>Let's MIX IT!</u></h1>
+<!---For section timeRestart, I created two div elements. In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable.   -->
+<section class="timeRestart">
+                <span class="timer">0:00
+                </span> s
+                <div class="restart" onclick=startGame()>
+                </div>
 
+        </section>
         <div class="instructions">   
             <h2 class="instuctionTitle">How to Play the Game</h2>
             <p class="instuctionDescrip"> Match as many words as you can before the clock runs out. </br> Race against time and the computer as you work to throw the computer off its game.</p>
@@ -32,25 +39,20 @@
             <button class="roundHard">Hard</button></br></br>
             <button class="start">START</button>
         </div>
+     
+              
 
 <!----Below is where you will see my game layout created in HTML, I created a div because I wanted to divide the game from the instructions. I named it container because it will make for easier styling once I head into the CSS. For example, I can allow my game layout to have a fixed width or to be centered.  From here I then separated it into 3 sections: the scoreTimeMove, the cpu and the user. Within the scoreTimeMove section I chose to have two div tags and one span tag. The two sections cpu and the user are very similar - within these sections I chose to use the tag ul which stands for unorderd list since we want our cards to be unordered (unordered list = deck of cards). The li tag represents the items in my list(or deck). -->
 
 
         <div class="container">
 
-<!---For section timeRestart, I created two div elements. In my div class restart I chose to use onclick=startGame instead of onclick=restartGame to avoid making a new variable.   -->
-                <section class="timeRestart">
-                        <div class="timer">
-                        </div>
-                        <div class="restart" onclick=startGame()>
-                        </div>
 
-                </section>
 
 <!---For section cpu, I created two span elements in the section "cpuScore".  I chose span for the moves because I wanted it to be in line with the text "Moves" and "Score". I chose to put the span tag around the integer 0 because I know that I will want to manipulate it in my javascript later. Important to note that before you put anything within you li tags - you will only see bullet pts.-->              
                 
                 <section class="cpu">
-
+                        <h1>CPU</h1>
                         <section class="cpuScore">
                                 <span class="cpuMoves">0</span> Moves
                                 <span class="cpuScore">0</span> Score
@@ -67,26 +69,26 @@
                                 </li>
 
                                 <li class="card">
-                                        <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Pink Sqaure">
-                                        <img class="back" src="./assets/banana.png" width="100px" height="100px" alt="Banana">
+                                        <img class="front" src="./assets/yellow Square.png" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Banana">
                                         
                                         </li>
                                  <li class="card">
-                                        <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Pink Sqaure">
-                                        <img class="back" src="./assets/banana.png" width="100px" height="100px" alt="Banana">
+                                        <img class="front" src="./assets/blue Square.png" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" src="./assets/coconut.png" width="100px" height="100px" alt="Banana">
                                         </li> 
                                 <li class="card">
-                                        <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="front" src="./assets/green Square.png" width="100px" height="100px" alt="Pink Sqaure">
                                         <img class="back" src="./assets/banana.png" width="100px" height="100px" alt="Banana">
 
                                         </li>
         
                                 <li class="card">
-                                        <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="front" src="./assets/Purple Square.png" width="100px" height="100px" alt="Pink Sqaure">
                                         <img class="back" src="./assets/banana.png" width="100px" height="100px" alt="Banana">
                                         </li>
                                 <li class="card">
-                                        <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="front" src="./assets/Red Square.png" width="100px" height="100px" alt="Pink Sqaure">
                                         <img class="back" src="./assets/banana.png" width="100px" height="100px" alt="Banana">
                                 </li>        
                         </ul>
@@ -95,7 +97,7 @@
 
 <!---For section user, I created an element with a class and an id. The reasoning behind this was that it was a way to avoid confusion for me down the road. So, my class "userDeck" would be for stying in CSS and my id "userCardDeck" would be for my javascript. Alternatively, I could use both class and id within my CSS. However, the id "userCardDeck" would have to remain unique/for this specific element whereas  the class "userDeck" could be used for multiple elements. -->
                 <section class="user">
-
+                                <h1>PLAYER</h1>
                         <section class="userScore">
                                         <span class="userMoves">0</span> Moves
                                         <span class="userScore">0</span> Score
@@ -103,7 +105,7 @@
                         </section>
                         <ul class="userDeck" id="userCardDeck">
                                         <li class="card">
-                                                <img class="front" src="./assets/cherry.png" width="100px" height="100px" alt="Cherry">
+                                                <img class="front" src="./assets/Red Square.png" width="100px" height="100px" alt="Cherry">
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                                 </li>
                 
@@ -112,20 +114,20 @@
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                                 </li>
                                         <li class="card">
-                                                <img class="front" src="./assets/Green Square.png" width="100px" height="100px" alt="Green Sqaure">
+                                                <img class="front" src="./assets/Blue Square.png" width="100px" height="100px" alt="Green Sqaure">
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                                 </li> 
                                         <li class="card">
-                                                <img class="front" src="./assets/Green Square.png" width="100px" height="100px" alt="Green Sqaure">
+                                                <img class="front" src="./assets/Purple Square.png" width="100px" height="100px" alt="Green Sqaure">
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                                 </li>
                 
                                         <li class="card">
-                                                <img class="front" src="./assets/Green Square.png" width="100px" height="100px" alt="Green Sqaure">
+                                                <img class="front" src="./assets/Pink Square.png" width="100px" height="100px" alt="Green Sqaure">
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                                 </li>
                                         <li class="card">
-                                                <img class="front" src="./assets/Green Square.png" width="100px" height="100px" alt="Green Sqaure">
+                                                <img class="front" src="./assets/Yellow Square.png " width="100px" height="100px" alt="Green Sqaure">
                                                 <img class="back" src="./assets/apple.png" width="100px" height="100px" alt="Green Apple">
                                 
                                         </li> 
