@@ -1,6 +1,7 @@
 # Game Name: Mix It
 # Players: Max 2 (You + CPU) 
-# Instructions: Put as many ingredients into the bowl as you can before the clock runs out. Race against time by yourself or take turns with a friend to see who can put the items in the bowl before the time runs out.
+# Instructions: Put as many ingredients into the bowl as you can before the clock runs out. 
+* Race against time by yourself or take turns with a friend to see who can put the items in the bowl before the time runs out.
 
 
 # Timeline:
