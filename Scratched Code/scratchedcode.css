@@ -1,0 +1,84 @@
+
+/* Style for Cards | So for the following CSS Code I am creating the parameters for which my cards will live in by calling on the containers that I made earlier - "cpu" and "user.  */
+.cpu {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    
+  
+  }
+  
+  .user {
+    width: 640px;
+    height: 640px;
+    flex-wrap: wrap;
+    position: relative;
+    perspective: 1000px;
+  
+  }
+  
+  /* Container that Houses the Game, by giving it three columns I was able to have the user postioned directly across from the cpu. The first row is 150px high and the third row is also 150px high so now they even out. */
+  
+  .container{
+    float: center;
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    padding:2%;
+    justify-content: center;
+    display: flex;
+    
+  
+  
+      
+  }
+  
+  /* These containers allow us to create the grid effect */
+  .cpuDeck{
+    display: grid;
+    grid: auto/ auto auto auto;
+    margin-right: 350px;
+  }
+  .userDeck{
+    display: grid;
+    grid: auto / auto auto auto;
+  }
+  
+  
+  /* Here I am definig the parameters for my cards, below is what I want each of them to do. The transition refers to the amount of seconds it will take for our card to transform so if we say that our card will transform in .60 seconds we will need to click and hold for that time period. The transform refers to how much we would like to see our card scale up (zoom in) or scale down (zoom out effect). The transform-style refers to.  */
+  .card {
+    width: 325px;
+    height: 325px;
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    transform-style: preserve-3d;
+    transform:scale(0.95);
+    transition:transform .4s;
+  }
+  
+  /* The animation of flip and active to ensure that the functionality is there */ 
+  .card:active {
+    transform: rotateY(180deg);
+    
+  }
+  
+  /* The ability to position one image behind (or ontop of) the other comes from the function the "position: absolute" and setting both the "front" card and "back" card to have the same parameters. The background that exists within the instructions for ".front,.back" will be place in between of the two images we have (an easy way to see your other image is to set the background to transparent). */
+  
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background:burlywood;
+    backface-visibility: hidden;
+  }
+  
+  /* This allows us to see the an image after we hover or click. We can always change front or back depending on what side of the card we want to see.  */
+  .back{
+    transform: rotateY(180deg);
+  }

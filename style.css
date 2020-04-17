@@ -5,8 +5,8 @@
 }
 
 body{
-  background-color: salmon;
-  color: white;
+  background-color: floralwhite;
+  color: black;
   font-size:30px;  
 }
 
@@ -19,8 +19,8 @@ p{
   
 }
 .gameName{
-    background-color: salmon;
-    color: white; 
+    background-color: floralwhite;
+    color: black; 
     text-align: center;
     font-size:150px; 
     padding: 10%;
@@ -58,14 +58,19 @@ p{
   display: inline-block;
 }
 
+.giphy-embed {
+ width:100%;
+
+
+}
 
 /* Style for Instructions */
 
 .instructions{
   text-align: center;
   padding:5%;
-  background-color: salmon;
-  color: white;
+  background-color: floralwhite;
+  color: black;
 }
 .instuctionTitle{
   font-size: 50px;
@@ -162,6 +167,7 @@ transform: translateY(4px);
 } */
 
 
+
 /* Style for Cards | So for the following CSS Code I am creating the parameters for which my cards will live in by calling on the containers that I made earlier - "cpu" and "user.  */
 .cpu {
   width: 640px;
@@ -182,7 +188,7 @@ transform: translateY(4px);
 
 }
 
-/* Container that Houses the Game, by giving it thre columns I was able to have the user postioned directly across from the cpu. The first row is 150px high and the third row is also 150px high so now they even out. */
+/* Container that Houses the Game, by giving it three columns I was able to have the user postioned directly across from the cpu. The first row is 150px high and the third row is also 150px high so now they even out. */
 
 .container{
   float: center;
@@ -210,7 +216,8 @@ transform: translateY(4px);
 }
 
 
-/* Here I am definig the parameters for my cards, below is what I want each of them to do. The transition refers to the amount of seconds it will take for our card to transform so if we say that our card will transform in .60 seconds we will need to click and hold for that time period. The transform refers to. The transform-style refers to.  */
+
+/* Here I am definig the parameters for my cards, below is what I want each of them to do. The transition refers to the amount of seconds it will take for our card to transform so if we say that our card will transform in .60 seconds we will need to click and hold for that time period. The transform refers to how much we would like to see our card scale up (zoom in) or scale down (zoom out effect). The transform-style refers to.  */
 .card {
   width: 325px;
   height: 325px;
@@ -219,7 +226,7 @@ transform: translateY(4px);
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   transform-style: preserve-3d;
   transform:scale(0.95);
-  transition:transform .4s;
+  transition:transform .50s;
 }
 
 /* The animation of flip and active to ensure that the functionality is there */ 
@@ -246,6 +253,20 @@ transform: translateY(4px);
   transform: rotateY(180deg);
 }
 
+#div1 {
+  width: 990px;
+  height: 990px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+ 
+}
+
+#div2 {
+  width: 990px;
+  height: 990px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
 
 
 
