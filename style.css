@@ -145,6 +145,30 @@ box-shadow: 0 5px #632;
 transform: translateY(4px);
 }
 
+
+.home{
+  vertical-align: middle;
+  width: 469px;
+  height: 120px;
+  background-color: #0093F5;
+  border-radius: 127px;
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.71);
+  border: 1px solid  rgb(0, 217, 255);
+  
+}
+
+
+.home:hover{
+background-color: rgb(0, 217, 255);
+}
+
+.start:active{
+background-color: royalblue;
+box-shadow: 0 5px #632;
+transform: translateY(4px);
+} 
+
+
 .start{
   vertical-align: middle;
   width: 469px;
@@ -155,6 +179,7 @@ transform: translateY(4px);
   border: 1px solid  rgb(0, 217, 255);
   
 }
+
 
 .start:hover{
 background-color: rgb(0, 217, 255);

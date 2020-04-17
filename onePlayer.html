@@ -1,0 +1,154 @@
+   
+   <!DOCTYPE html>
+
+   <head>
+
+<!--This just identifies the format my HTML is in.-->      
+       <meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="description" content="">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--This links the css file to the style sheet.-->  
+     
+       <link rel="stylesheet" href="./style.css">
+
+<!--This is the title for my game.-->
+
+       <title>Mix and Match </title>
+       
+
+
+   </head>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--This is the beginning of the body.-->
+
+   <body>
+           
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--This is the button that allows me to navigate from one page to another. I do not need javascript for this action.-->
+        <button class="home" onclick="document.location = './index.html'">HOME</button>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+ <!--This is the GIPHY on each of the pages that I think is super cute and funny. I also do not need javascript for this action.-->              
+                <p class="level">
+                
+                <iframe src="https://giphy.com/embed/xT0xePLIUyxnXso8co" width="50%" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen>
+                </iframe>   
+                
+                <br/>
+                <br/>
+
+    <!--This is the button that will start the timer. Javascript will be needed to manipulate this. I will also need it to alert that the time has run out. I will need javascript for this if I want it to start the timer.-->            
+                <button class="start" onclick="setTimeout(gameOver,5000);" >
+                        START
+                </button>
+
+
+                </p>  
+   
+ <!----NOTES: Below is where you will see my game layout created in HTML, I created a div because I wanted to divide the game from the instructions. I named it container because it will make for easier styling once I head into the CSS. For example, I can allow my game layout to have a fixed width or to be centered.  From here I then separated it into 3 sections: the scoreTimeMove, the cpu and the user. Within the scoreTimeMove section I chose to have two div tags and one span tag. The two sections cpu and the user are very similar - within these sections I chose to use the tag ul which stands for unorderd list since we want our cards to be unordered (unordered list = deck of cards). The li tag represents the items in my list(or deck). -->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+     <!--This is a container that holds two sections: the cpu's section and the players section. I do not need javascript for this.-->
+        <div class="container">
+
+                    <section class="cpu" >
+                            <h1>
+                        CPU
+
+                            </h1>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+     <!--This is the score that will need to be update for the cpu or player. I will NEED JS for this.-->
+                                <section class="cpuScore">
+                                    <p> 
+                                        <span id="bowl">
+                                                0
+
+                                        </span> Ingredients
+                                    </p>   
+                                </section>
+
+
+
+<!--NOTES: I chose to put the span tag around the integer 0 because I know that I will want to manipulate it in my javascript later. Important to note that before you put anything within you li tags - you will only see bullet pts.-->                                         
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+  <!--This is the bowl for which items (or ingredients) get dropped into for the cpu.-->
+  
+          
+                                        <img id="div1"  ondrop="drop(event)" ondragover="allowDrop(event)" src="./assets/bowl.png" alt="Banana" width="1000px" height="1000px">
+                                
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--This is a deck for the cpu that is arranged like a placemat underneath the bowl. These cards have properties in css which give it animation. The properties in html listed below also animate it so that we are able to drag and drop the cards. I will NEED JS for this-->
+                           <ul class="cpuDeck" id="cpuCardDeck">
+                      
+                                <li class="card" data-framework="banana" id="drag1" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/Pink Square.png" id="drag1" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" src="./assets/banana.png"  id="drag1" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Banana">
+                                </li>
+                                                                                
+                                                                        
+                                <li class="card" data-framework="apple" id="drag2" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/yellow Square.png" id="drag2" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Yellow Sqaure">
+                                        <img class="back" src="./assets/apple.png" id="drag2" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Apple">
+                                                                                
+                                </li>
+                                                                       
+                                <li class="card" data-framework="coconut" id="drag3" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/blue Square.png" id="drag3" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Blue Sqaure">
+                                        <img class="back" src="./assets/coconut.png" id="drag3" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="coconut">
+                                </li> 
+                                                                        
+                                <li class="card" data-framework="cherry" id="drag4" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/green Square.png" id="drag4" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" src="./assets/cherry.png" id="drag4" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Cherry">
+                                        
+                                </li>
+                                                
+                                                                        
+                                <li class="card"data-framework="strawberry" id="drag5" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/Purple Square.png" id="drag5" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" src="./assets/strawberry.png" id="drag5" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Strawberry">
+                                </li>
+                                                                        
+                                <li class="card" data-framework="orange" id="drag6" draggable="true" ondragstart="drag(event)">
+                                        <img class="front" src="./assets/Red Square.png" id="drag6" draggable="true" ondragstart="drag(event)" width="100px" height="100px" alt="Pink Sqaure">
+                                        <img class="back" id="drag6" draggable="true" ondragstart="drag(event)" src="./assets/orange.png" width="100px" height="100px" alt="Orange">
+                                </li>        
+                         </ul>
+                                        
+                </ul>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--This is the end of the section with the class name cpu.-->
+                    </section>
+    
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <!--This is the end of the div with the class name container.-->
+            </div>
+           
+    
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!--This links jquery and javascript to my html file.-->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./app.js" async defer></script>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
+
