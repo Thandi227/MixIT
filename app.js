@@ -1,21 +1,4 @@
 
-//SCORE
-//What do I want to do: I want to be able to have the score increase each time an item is droped into the bowl.
-//Span ID name is "bowl";  this span ID name is the same for section CLASS "cpuScore" and "userScore"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //DRAG & DROP
