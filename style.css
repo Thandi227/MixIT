@@ -282,7 +282,7 @@ transform: translateY(4px);
   width: 990px;
   height: 990px;
   padding: 10px;
-  border: 1px solid #aaaaaa;
+  border: none;
  
 }
 
@@ -290,7 +290,7 @@ transform: translateY(4px);
   width: 990px;
   height: 990px;
   padding: 10px;
-  border: 1px solid #aaaaaa;
+  border: none;
 }
 
 
