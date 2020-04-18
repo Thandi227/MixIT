@@ -19,7 +19,8 @@ function allowDrop(event) {
     event.target.appendChild(document.getElementById(data));
   }
 
-
+//Citation:https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+//Citation: https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData 
 
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,14 +31,6 @@ function gameOver (){
     alert('Time is Up. The Game Is Over!');
 }
 
+//Citation For Code: https://www.w3schools.com/jsref/met_win_alert.asp
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
 
